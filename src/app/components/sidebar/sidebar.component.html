@@ -1,0 +1,21 @@
+<mat-nav-list>
+  <h4 class="name">{{name}}</h4>
+  <p class="role">Role : {{role}}</p>
+  <mat-divider></mat-divider>
+  <a mat-list-item [routerLink]="['home']" *ngIf="allowedUserClass([0,1,2])" routerLinkActive="active-link">
+    <mat-icon mat-list-icon>home</mat-icon>
+    <h4 matLine>Home</h4>
+  </a>
+  <a mat-list-item [routerLink]="['profile']" *ngIf="allowedUserClass([0,1,2])" routerLinkActive="active-link">
+    <mat-icon mat-list-icon>person</mat-icon>
+    <h4 matLine>Profile</h4>
+  </a>
+  <a mat-list-item [routerLink]="['setting']" *ngIf="allowedUserClass([1,2])" routerLinkActive="active-link">
+    <mat-icon mat-list-icon>settings</mat-icon>
+    <h4 matLine>Setting</h4>
+  </a>
+  <a mat-list-item [routerLink]="['manageUser']" *ngIf="allowedUserClass([2])" routerLinkActive="active-link">
+    <mat-icon mat-list-icon>people</mat-icon>
+    <h4 matLine>Users</h4>
+  </a>
+</mat-nav-list>

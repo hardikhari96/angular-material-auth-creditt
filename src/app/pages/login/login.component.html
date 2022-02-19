@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="login-box">
+    <h1>Creditt | Login here</h1>
+    <form style="display: grid;" [formGroup]="formgroup" (submit)="loginUser()">
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email id</mat-label>
+        <input matInput type="email" placeholder="Email Here" formControlName="email">
+        <mat-error *ngIf="hasError('email', 'required')"> Please Enter Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" formControlName="password">
+        <mat-error *ngIf="hasError('password', 'required')"> Please Enter Password</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit"> Login</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button color="accent" [routerLink]="['/register']"> Register</button>
+    </form>
+  </div>
+</div>

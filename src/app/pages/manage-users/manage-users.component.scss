@@ -1,0 +1,9 @@
+.custom-dialog-container {
+  width: 40%;
+}
+
+@media only screen and (max-width: 760px) {
+  .custom-dialog-container {
+      width: 100%;
+  }
+}

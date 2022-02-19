@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  font-size: 50px;
+  top: 40%;
+}

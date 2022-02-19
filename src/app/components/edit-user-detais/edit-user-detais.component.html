@@ -1,0 +1,50 @@
+<form [formGroup]="userDetailForm" (ngSubmit)="updateUser()">
+  <mat-grid-list cols=" 3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name here" required type="text" formControlName="name">
+        <mat-error> Please Enter Name</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select placeholder="Select gender" formControlName="gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+          <mat-option value="Other">Other</mat-option>
+        </mat-select>
+        <mat-error> Please Enter gender</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="email here" required type="text" formControlName="email">
+        <mat-error> Please Enter email</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Mobile No</mat-label>
+        <input matInput placeholder="mobile here" required type="text" formControlName="mobile">
+        <mat-error> Please Enter mobile</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>User Role</mat-label>
+        <mat-select placeholder="Select Role" formControlName="role">
+          <mat-option value="0">User</mat-option>
+          <mat-option value="1">Manager</mat-option>
+          <mat-option value="2">Admin</mat-option>
+        </mat-select>
+        <mat-error> Please Select Role</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

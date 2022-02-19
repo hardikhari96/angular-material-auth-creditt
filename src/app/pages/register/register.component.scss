@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  justify-content: center;
+ }
+ .login-box{
+   margin-top: 10Vh;
+   width: 30%;
+   background-color: rebeccapurple;
+   border-radius: 20px;
+   padding: 30px;
+   text-align: center;
+   color: white;
+ }
+
+
+button{
+  margin-top: 10px;
+}
+
+.mobileprefix{
+  padding: 10px;
+  position: relative;
+  top: -4px;
+}
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}

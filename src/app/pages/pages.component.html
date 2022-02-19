@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button mat-icon-button *ngIf="sidenav.mode === 'side'" (click)="sidenav.toggle()">
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>
+  <app-header></app-header>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" mode="side" opened>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

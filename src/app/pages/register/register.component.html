@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="login-box">
+    <h1>Creditt | Register here</h1>
+
+    <form style="display: grid;" [formGroup]="formgroup" (submit)="registerUser()">
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name here" type="text" required formControlName="name">
+        <mat-error *ngIf="hasError('name', 'required')"> Please Enter Name</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Mobile No</mat-label>
+        <input matInput #input type="number" maxlength="10" class="example-right-align" required placeholder="Mobile No"
+          formControlName="mobile">
+        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+        <span class="mobileprefix" matPrefix>+91</span>
+        <mat-error *ngIf="hasError('mobile', 'required')"> Please Enter Mobile Number</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email id</mat-label>
+        <input matInput placeholder="Email id" type="email" required formControlName="email">
+        <mat-error *ngIf="hasError('email', 'required')"> Please Enter Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" required formControlName="password">
+        <mat-error *ngIf="hasError('password', 'required')"> Please Enter Password</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>User Role</mat-label>
+        <mat-select placeholder="Select Role" formControlName="role">
+          <mat-option value="0">User</mat-option>
+          <mat-option value="1">Manager</mat-option>
+          <mat-option value="2">Admin</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <button mat-raised-button color="primary" style="margin: 0px;" type="submit"> Register</button>
+      <mat-divider></mat-divider>
+      <button mat-raised-button color="accent" [routerLink]="['/login']"> Login</button>
+    </form>
+
+  </div>
+</div>
